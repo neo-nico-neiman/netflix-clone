@@ -1,5 +1,5 @@
 function titleGenerator(numberOfWords: number = 2) {
-    let wordList = [
+    let wordsList = [
         // Borrowed from xkcd password generator which borrowed it from wherever
         "ability","able","aboard","about","above","accept","accident","according",
         "account","accurate","acres","across","act","action","active","activity",
@@ -251,9 +251,13 @@ function titleGenerator(numberOfWords: number = 2) {
 
     numberOfWords = Math.random() < 0.5 ? numberOfWords : numberOfWords + 1;
     for( let words=0; words < numberOfWords; words++) {
-        const index = Math.round(Math.random() * 1000);
-        console.log(index)
-        title.push(wordList[index]);
+        let index = Math.round(Math.random() * 2000);
+
+        if (index >= wordsList.length) {
+            index = index - Math.round(Math.random() * 1000)
+        }
+
+        title.push(wordsList[index]);
     }
     return title.join(' ');
 }

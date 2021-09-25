@@ -132,6 +132,10 @@ function App() {
     <div className="App">
         <CategoryRow moviesList={moviesListAction}/>
         <CategoryRow moviesList={moviesListComedy}/>
+        <CategoryRow moviesList={moviesListAction}/>
+        <CategoryRow moviesList={moviesListComedy}/>
+        <CategoryRow moviesList={moviesListAction}/>
+        <CategoryRow moviesList={moviesListComedy}/>
     </div>
   );
 }

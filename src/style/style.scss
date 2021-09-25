@@ -1,10 +1,13 @@
 @import './containers';
 @import './components';
+@import './shared.scss';
 
-.App {
+body {
     background-color: rgb(23, 23, 23);
-    height: 100vh;
-    width: 100vw;
+    padding: 16px
+}
+.App {
+    
 }
 
 h3, h2 {
