@@ -1,21 +1,19 @@
 import React from "react";
-import { Thumbnail, TitleLarge, TitleMedium } from "../components";
-import { Movie } from "../models/movies.model";
+import { Thumbnail, TitleLarge } from "../components";
+import { Movie, MovieList } from "../models/movies.model";
 
 type CategoryRowProps = {
-    moviesList: Movie[];
-    category: string;
+    moviesList: MovieList;
 };
 
-const CategoryRow: React.FC<CategoryRowProps> = ({ moviesList, category }) => {
+const CategoryRow: React.FC<CategoryRowProps> = ({ moviesList }) => {
     return (<div className={'category-wrapper'}>
-        <TitleLarge class={'category-row-title'}>{category}</TitleLarge>
+        <TitleLarge class={'category-row-title'}>{moviesList.category}</TitleLarge>
         <div className={'category-row'}>
-            {moviesList.map(
+            {moviesList.list.map(
                 (movie: Movie) => <Thumbnail imageURL={movie.imageURL}
                                              alt={movie.altText}
-                                             title={movie.title}
-                                             />
+                                             title={movie.title}/>
             )}
         </div>
     </div>);

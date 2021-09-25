@@ -5,8 +5,10 @@
 
     &-wrapper {
         display: grid;
-        grid-template-rows: 30px 100px;
+        grid-template-rows: auto auto;
         text-align: left;
+        padding-top: $padding;
+        overflow-x: hidden;
     }
 
     &-row {
@@ -16,6 +18,7 @@
 
         &-title {
             color: aliceblue;
+            margin-bottom: $margin-sm;
         } 
     }
    
