@@ -10,7 +10,7 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 	return (
 		<div className='navBar'>
 			<div className='navBar-logo-and-items'>
-				Logo
+				<p>Logo</p>
 				<ul>
 					{menuItems.map((item: NavBarItem) => (
 						<li key={uuidv4()}>{item.label}</li>

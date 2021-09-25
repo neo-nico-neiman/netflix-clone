@@ -1,4 +1,5 @@
 import "./App.scss";
+import HeroImage from "./components/HeroImage";
 import NavBar from "./components/NavBar";
 import CategoryRow from "./containers/CategoryRow";
 import { Categories } from "./models/categories.enum";
@@ -295,6 +296,7 @@ function App() {
 	return (
 		<>
 			<NavBar menuItems={menuItems} />
+			<HeroImage movie={moviesListAction.list[1]} />
 			<div className='App'>
 				<CategoryRow moviesList={moviesListAction} />
 				<CategoryRow moviesList={moviesListComedy} />

@@ -21,10 +21,17 @@
 .navBar {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: $margin;
 
 	&-logo-and-items {
 		display: grid;
 		grid-template-columns: auto auto;
+	}
+
+	p {
+		padding: $padding-sm $padding;
+		color: $bright-color;
+		font-size: medium !important;
 	}
 
 	ul {
@@ -52,5 +59,22 @@
 			color: $background-color;
 			border-radius: 5px;
 		}
+	}
+}
+
+.hero {
+	&-image {
+		width: 100vw;
+	}
+
+	&-text {
+		width: 100%;
+		text-align: left;
+		position: absolute;
+		top: 20vh;
+		padding: 0 $padding-lg;
+		color: $bright-color;
+		background-color: $background-color-2;
+		padding: $padding-sm $padding;
 	}
 }
