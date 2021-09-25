@@ -1,0 +1,22 @@
+@import '../style/shared.scss';
+
+.category {
+    
+
+    &-wrapper {
+        display: grid;
+        grid-template-rows: 30px 100px;
+        text-align: left;
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: repeat(10, min-content);
+        grid-column-gap: $column-gap;
+
+        &-title {
+            color: aliceblue;
+        } 
+    }
+   
+}
