@@ -1,25 +1,22 @@
-@import '../style/shared.scss';
+@import "../style/shared.scss";
 
 .category {
-    
+	&-wrapper {
+		display: grid;
+		grid-template-rows: auto auto;
+		text-align: left;
+		padding-top: $padding;
+		overflow-x: hidden;
+	}
 
-    &-wrapper {
-        display: grid;
-        grid-template-rows: auto auto;
-        text-align: left;
-        padding-top: $padding;
-        overflow-x: hidden;
-    }
+	&-row {
+		display: grid;
+		grid-template-columns: repeat(10, min-content);
+		grid-column-gap: $column-gap;
 
-    &-row {
-        display: grid;
-        grid-template-columns: repeat(10, min-content);
-        grid-column-gap: $column-gap;
-
-        &-title {
-            color: aliceblue;
-            margin-bottom: $margin-sm;
-        } 
-    }
-   
+		&-title {
+			color: $bright-color;
+			margin-bottom: $margin-sm;
+		}
+	}
 }
