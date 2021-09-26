@@ -1,0 +1,36 @@
+@import "../shared.scss";
+
+.hover-menu {
+	text-align: center;
+
+	&-wrapper {
+		position: relative;
+	}
+
+	&-label {
+		margin: $margin-sm $margin-lg 0 0;
+		color: $bright-color;
+	}
+	&-items {
+		list-style: none;
+		display: grid;
+		grid-auto-rows: auto;
+		grid-row-gap: 4px;
+		position: absolute;
+		top: 35px;
+		right: 25px;
+		z-index: 10;
+		background-color: $bright-color-2;
+		border-radius: $border-radius;
+
+		li {
+			padding: $padding-xs $padding-sm;
+
+			&:hover {
+				background-color: $background-color-2;
+				color: $bright-color;
+				cursor: pointer;
+			}
+		}
+	}
+}

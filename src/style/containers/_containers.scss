@@ -1,0 +1,22 @@
+@import "../shared.scss";
+
+.category {
+	&-wrapper {
+		display: grid;
+		grid-template-rows: auto auto;
+		text-align: left;
+		padding: $padding $padding 0 $padding;
+		overflow-x: hidden;
+	}
+
+	&-row {
+		display: grid;
+		grid-template-columns: repeat(10, min-content);
+		grid-column-gap: $column-gap;
+
+		&-title {
+			color: $bright-color;
+			margin-bottom: $margin-sm;
+		}
+	}
+}

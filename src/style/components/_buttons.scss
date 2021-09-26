@@ -1,0 +1,17 @@
+@import "../shared.scss";
+
+.button {
+	&-secondary {
+		padding: $padding-xs $padding-lg;
+		border-radius: $border-radius-sm;
+		background-color: $background-color-2;
+		color: $bright-color;
+		border: none;
+		font-weight: 700;
+
+		&:hover {
+			background-color: $bright-color;
+			color: $background-color;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@import "../shared.scss";
+
+.thumbnail {
+	text-align: left;
+	width: 150px;
+
+	&-title {
+		color: $bright-color-2;
+	}
+
+	&-image {
+		width: 150px;
+		transition: transform 0.2s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

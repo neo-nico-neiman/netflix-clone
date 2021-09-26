@@ -1,0 +1,48 @@
+@import "../shared.scss";
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: $margin;
+
+	&-logo-and-items {
+		display: grid;
+		grid-template-columns: auto auto;
+
+		ul {
+			list-style: none;
+			display: flex;
+
+			li {
+				padding: $padding-sm $padding;
+				color: $bright-color-2;
+				transition: transform 0.2s;
+
+				&:hover {
+					color: $bright-color;
+					transform: scale(1.1);
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	p {
+		padding: $padding-sm $padding;
+		color: $bright-color;
+		font-size: medium !important;
+		font-weight: 900;
+		font-variant: small-caps;
+	}
+
+	&-avatar {
+		padding: $padding-sm $padding;
+		color: $bright-color;
+
+		&:hover {
+			background-color: $bright-color;
+			color: $background-color;
+			border-radius: $border-radius;
+		}
+	}
+}
