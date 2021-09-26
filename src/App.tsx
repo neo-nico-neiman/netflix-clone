@@ -4,7 +4,7 @@ import { Home } from "./containers/Home";
 import { NavBarItem } from "./models/navBar.model";
 import { Route } from "react-router-dom";
 import { CommingSoon } from "./components/CommingSoon";
-import { Movie } from "./containers/Movie";
+import { MoviePage } from "./containers/MoviePage";
 
 function App() {
 	const menuItems: NavBarItem[] = [
@@ -19,7 +19,7 @@ function App() {
 			<Route path='/categories' component={CommingSoon}></Route>
 			<Route path='/new-arrivals' component={CommingSoon}></Route>
 			<Route path='/my-picks' component={CommingSoon}></Route>
-			<Route path='/movies/:id' component={Movie}></Route>
+			<Route path='/movies/:id' component={MoviePage}></Route>
 			<Route path='/' exact component={Home}></Route>
 		</>
 	);

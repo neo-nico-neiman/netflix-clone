@@ -1,0 +1,72 @@
+@import "../shared.scss";
+
+.movie-page {
+	&-wrapper {
+		color: #fff;
+		object-fit: contain;
+		height: 80vh;
+		position: relative;
+		cursor: pointer;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	&-text {
+		padding-top: 140px;
+		padding-left: $padding-lg;
+		cursor: pointer;
+		height: 80vh;
+		background-image: linear-gradient(
+			269deg,
+			transparent,
+			transparent,
+			transparent,
+			transparent,
+			rgba(37, 37, 37, 0.61),
+			#111
+		);
+
+		&-movie-specs {
+			display: flex;
+			align-items: center;
+			text-align: center;
+
+			p {
+				margin-right: $margin-sm;
+				font-size: medium;
+			}
+
+			&-status {
+				color: lawngreen;
+				font-weight: bold;
+			}
+
+			&-rated {
+				background-color: $background-color-2;
+				font-weight: bold;
+				padding: $padding-xs $padding-sm;
+				border-radius: $border-radius-sm;
+			}
+		}
+
+		&-description {
+			width: 45rem;
+			line-height: 1.3;
+			padding-top: $padding;
+			font-size: large;
+			font-weight: 500;
+			max-width: 400px;
+			height: 80px;
+			cursor: pointer;
+		}
+	}
+
+	&-crew {
+		p {
+			font-size: small;
+			font-weight: 400;
+			color: $bright-color-2;
+			margin-bottom: $margin-xs;
+		}
+	}
+}
