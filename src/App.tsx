@@ -19,7 +19,7 @@ function App() {
 			<Route path='/categories' component={CommingSoon}></Route>
 			<Route path='/new-arrivals' component={CommingSoon}></Route>
 			<Route path='/my-picks' component={CommingSoon}></Route>
-			<Route path='/movie' component={Movie}></Route>
+			<Route path='/movies/:id' component={Movie}></Route>
 			<Route path='/' exact component={Home}></Route>
 		</>
 	);
