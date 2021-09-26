@@ -1,6 +1,13 @@
 import React from "react";
-import { NavBarItem } from "../models/navBar.model";
+import { MenuItem, NavBarItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
+import HoverMenu from "./HoverMenu";
+
+const hoverMenuItems: MenuItem[] = [
+	{ label: "Profile", link: "" },
+	{ label: "Contact", link: "" },
+	{ label: "Logout", link: "" },
+];
 
 type NabBarProps = {
 	menuItems: NavBarItem[];
@@ -17,7 +24,7 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 					))}
 				</ul>
 			</div>
-			<div className='navBar-avatar'>Avatar</div>
+			<HoverMenu label={"User"} menuItem={hoverMenuItems} />
 		</div>
 	);
 };

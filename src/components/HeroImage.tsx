@@ -8,7 +8,7 @@ type HeroImageProps = {
 
 const HeroImage: React.FC<HeroImageProps> = ({ movie }) => {
 	return (
-		<div>
+		<div className='hero-wrapper'>
 			<div className='hero-text'>
 				<TitleXLarge class={"hero-text-title"}>{movie.title}</TitleXLarge>
 				<TextContent>{movie.description}</TextContent>

@@ -26,28 +26,29 @@
 	&-logo-and-items {
 		display: grid;
 		grid-template-columns: auto auto;
+
+		ul {
+			list-style: none;
+			display: flex;
+
+			li {
+				padding: $padding-sm $padding;
+				color: $bright-color;
+				transition: transform 0.2s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
 	}
 
 	p {
 		padding: $padding-sm $padding;
 		color: $bright-color;
 		font-size: medium !important;
-	}
-
-	ul {
-		list-style: none;
-		display: flex;
-
-		li {
-			padding: $padding-sm $padding;
-			color: $bright-color;
-
-			&:hover {
-				background-color: $bright-color;
-				color: $background-color;
-				border-radius: 5px;
-			}
-		}
+		font-weight: 900;
+		font-variant: small-caps;
 	}
 
 	&-avatar {
@@ -57,14 +58,19 @@
 		&:hover {
 			background-color: $bright-color;
 			color: $background-color;
-			border-radius: 5px;
+			border-radius: $border-radius;
 		}
 	}
 }
 
 .hero {
+	&-wrapper {
+		height: 350px;
+	}
+
 	&-image {
 		width: 100vw;
+		clip-path: inset(0px 0px 200px 0px);
 	}
 
 	&-text {
@@ -72,9 +78,40 @@
 		text-align: left;
 		position: absolute;
 		top: 20vh;
-		padding: 0 $padding-lg;
 		color: $bright-color;
 		background-color: $background-color-2;
 		padding: $padding-sm $padding;
+		z-index: 2;
+	}
+}
+
+.hover-menu {
+	text-align: center;
+
+	&-label {
+		margin: $margin-sm $margin-lg 0 0;
+		color: $bright-color;
+	}
+	&-items {
+		list-style: none;
+		display: grid;
+		grid-auto-rows: auto;
+		grid-row-gap: 4px;
+		position: absolute;
+		top: 35px;
+		right: 25px;
+		z-index: 10;
+		background-color: $bright-color-2;
+		border-radius: $border-radius;
+
+		li {
+			padding: $padding-xs $padding-sm;
+
+			&:hover {
+				background-color: $background-color-2;
+				color: $bright-color;
+				cursor: pointer;
+			}
+		}
 	}
 }
