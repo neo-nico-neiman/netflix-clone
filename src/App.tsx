@@ -3,10 +3,8 @@ import NavBar from "./components/NavBar";
 import { Home } from "./containers/Home";
 import { NavBarItem } from "./models/navBar.model";
 import { Route } from "react-router-dom";
-import { NewArrivals } from "./containers/NewArrivals";
-import { MyPicks } from "./containers/MyPicks";
-import { Categories } from "./containers/Categories";
 import { CommingSoon } from "./components/CommingSoon";
+import { Movie } from "./containers/Movie";
 
 function App() {
 	const menuItems: NavBarItem[] = [
@@ -17,20 +15,12 @@ function App() {
 	return (
 		<>
 			<NavBar menuItems={menuItems} />
-			<Route path='/home' render={() => <Home></Home>}></Route>
-			<Route
-				path='/categories'
-				render={() => <CommingSoon></CommingSoon>}
-			></Route>
-			<Route
-				path='/new-arrivals'
-				render={() => <CommingSoon></CommingSoon>}
-			></Route>
-			<Route
-				path='/my-picks'
-				render={() => <CommingSoon></CommingSoon>}
-			></Route>
-			<Route path='/' exact render={() => <Home></Home>}></Route>
+			<Route path='/home' component={Home}></Route>
+			<Route path='/categories' component={CommingSoon}></Route>
+			<Route path='/new-arrivals' component={CommingSoon}></Route>
+			<Route path='/my-picks' component={CommingSoon}></Route>
+			<Route path='/movie' component={Movie}></Route>
+			<Route path='/' exact component={Home}></Route>
 		</>
 	);
 }
