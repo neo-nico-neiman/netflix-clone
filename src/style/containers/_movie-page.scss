@@ -69,4 +69,16 @@
 			margin-bottom: $margin-xs;
 		}
 	}
+
+	&-CTA {
+		margin-top: $margin;
+		display: flex;
+		flex-direction: column;
+		width: 20vw;
+
+		button {
+			margin-top: $margin-sm;
+			text-align: left;
+		}
+	}
 }

@@ -2,9 +2,8 @@ import React from "react";
 import { getSelectedMovie } from "../state/movies.facade";
 import { Movie } from "../models/movies.model";
 import { useParams } from "react-router-dom";
-import HeroImage from "../components/HeroImage";
 import { TitleXLarge, TextContent } from "../components";
-import { ButtonSecondary } from "../components/Buttons";
+import { ButtonHollowBorder } from "../components/Buttons";
 import nameGenerator from "../utils/nameGenerator";
 
 const MoviePage = () => {
@@ -21,7 +20,8 @@ const MoviePage = () => {
 	};
 
 	movie$.subscribe((movie) => (selectedMovie = movie));
-	console.log(selectedMovie.imageURL);
+
+	const onClick = () => null;
 	return (
 		<div
 			className='movie-page-wrapper'
@@ -65,6 +65,32 @@ const MoviePage = () => {
 					<TextContent>Cast: {nameGenerator(3)}</TextContent>
 					<TextContent>Director: {nameGenerator()} </TextContent>
 					<TextContent>Creator: {nameGenerator()}</TextContent>
+				</div>
+				<div className='movie-page-CTA'>
+					<ButtonHollowBorder
+						label='Rate This Title'
+						icon='thumbs'
+						onClick={onClick()}
+						className=''
+					></ButtonHollowBorder>
+					<ButtonHollowBorder
+						label='Play'
+						icon='play'
+						onClick={onClick()}
+						className=''
+					></ButtonHollowBorder>
+					<ButtonHollowBorder
+						label='More Like This'
+						icon='grid'
+						onClick={onClick()}
+						className=''
+					></ButtonHollowBorder>
+					<ButtonHollowBorder
+						label={"Audio & Subtitles"}
+						icon='subtitles'
+						onClick={onClick()}
+						className=''
+					></ButtonHollowBorder>
 				</div>
 			</div>
 		</div>
