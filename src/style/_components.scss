@@ -88,6 +88,10 @@
 .hover-menu {
 	text-align: center;
 
+	&-wrapper {
+		position: relative;
+	}
+
 	&-label {
 		margin: $margin-sm $margin-lg 0 0;
 		color: $bright-color;

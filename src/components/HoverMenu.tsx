@@ -20,7 +20,7 @@ const HoverMenu: React.FC<HoverMenuProps> = ({ label, menuItem }) => {
 	});
 
 	return (
-		<div>
+		<div className='hover-menu-wrapper'>
 			<div
 				className={"hover-menu-label"}
 				onMouseOver={() => setIsOpen(!isOpen)}
