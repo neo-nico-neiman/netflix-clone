@@ -13,11 +13,11 @@ function TitleMedium(props: any) {
 }
 
 function TitleSmall(props: any) {
-	return <h5>{props.children}</h5>;
+	return <h5 className={props.class}>{props.children}</h5>;
 }
 
 function TextContent(props: any) {
-	return <p>{props.children}</p>;
+	return <p className={props.class}>{props.children}</p>;
 }
 
 export { TitleXLarge, TitleLarge, TitleMedium, TitleSmall, TextContent };

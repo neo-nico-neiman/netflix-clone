@@ -1,12 +1,9 @@
-@import "./containers";
-@import "./components";
+@import "./containers/containers";
+@import "./components/components";
 @import "./shared.scss";
 
 body {
 	background-color: $background-color;
-}
-
-.App {
 }
 
 h1,

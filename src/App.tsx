@@ -296,8 +296,8 @@ function App() {
 	return (
 		<>
 			<NavBar menuItems={menuItems} />
-			<HeroImage movie={moviesListAction.list[1]} />
-			<div className='App'>
+			<HeroImage movie={moviesListAction.list[7]} />
+			<div>
 				<CategoryRow moviesList={moviesListAction} />
 				<CategoryRow moviesList={moviesListComedy} />
 				<CategoryRow moviesList={moviesListHorror} />
