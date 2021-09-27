@@ -81,5 +81,11 @@
 			margin-top: $margin-sm;
 			text-align: left;
 		}
+
+		&-mobile {
+			display: grid;
+			grid-template-columns: max-content max-content;
+			justify-items: left;
+		}
 	}
 }

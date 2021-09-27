@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { TitleXLarge, TextContent } from "../components";
 import { ButtonHollowBorder } from "../components/Buttons";
 import nameGenerator from "../utils/nameGenerator";
+import useWindowDimensions from "../hooks/useWindowsDimension";
 
 const MoviePage = () => {
 	const { id } = useParams<{ id: string }>();
@@ -22,6 +23,8 @@ const MoviePage = () => {
 	movie$.subscribe((movie) => (selectedMovie = movie));
 
 	const onClick = () => null;
+
+	const screenSize = useWindowDimensions();
 	return (
 		<div
 			className='movie-page-wrapper'
@@ -55,7 +58,11 @@ const MoviePage = () => {
 						<TextContent>Director: {nameGenerator()} </TextContent>
 						<TextContent>Creator: {nameGenerator()}</TextContent>
 					</div>
-					<div className='movie-page-CTA'>
+					<div
+						className={
+							screenSize === "sm" ? "movie-page-CTA-mobile" : "movie-page-CTA"
+						}
+					>
 						<ButtonHollowBorder
 							label='Rate This Title'
 							icon='thumbs'
