@@ -3,7 +3,7 @@ import HeroImage from "../components/HeroImage";
 import { Categories } from "../models/categories.enum";
 import { MovieList } from "../models/movies.model";
 import { titleGenerator } from "../utils/titleCreator";
-import CategoryRow from "./CategoryRow";
+import CategoryRow from "../components/CategoryRow";
 
 const moviesListAction: MovieList = {
 	category: Categories.ACTION,

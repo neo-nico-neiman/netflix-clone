@@ -4,6 +4,7 @@ import {
 	TiMediaPlayOutline,
 	TiThLargeOutline,
 	TiMessage,
+	TiEyeOutline,
 } from "react-icons/ti";
 
 const Icons = {
@@ -33,6 +34,13 @@ const Icons = {
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiMessage />
+		</IconContext.Provider>
+	),
+	eye: (
+		<IconContext.Provider
+			value={{ color: "inherit", className: "react-icons" }}
+		>
+			<TiEyeOutline />
 		</IconContext.Provider>
 	),
 };

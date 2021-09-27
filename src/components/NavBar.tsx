@@ -3,6 +3,8 @@ import { MenuItem, NavBarItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
 import HoverMenu from "./HoverMenu";
 import { Link } from "react-router-dom";
+import Icons from "../utils/Icons";
+import Logo from "./Logo";
 
 const hoverMenuItems: MenuItem[] = [
 	{ label: "Profile", link: "" },
@@ -19,7 +21,9 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 		<div className='navBar'>
 			<div className='navBar-logo-and-items'>
 				<p>
-					<Link to='/home'>Logo</Link>
+					<Link to='/home'>
+						<Logo />
+					</Link>
 				</p>
 				<ul>
 					{menuItems.map((item: NavBarItem) => (
