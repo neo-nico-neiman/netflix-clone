@@ -5,4 +5,5 @@ export enum IconTypes {
 	SUBTITLES = "subtitles",
 	EYE = "eye",
 	MENU = "menu",
+	USER = "user",
 }

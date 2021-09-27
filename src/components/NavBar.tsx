@@ -9,9 +9,9 @@ import { ScreenSize } from "../models/screenSize.enum";
 import { IconTypes } from "../models/icons.enum";
 
 const hoverMenuItems: MenuItem[] = [
-	{ label: "Profile", link: "" },
-	{ label: "Contact", link: "" },
-	{ label: "Logout", link: "" },
+	{ label: "Profile", link: "/profile" },
+	{ label: "Contact", link: "/contact" },
+	{ label: "Logout", link: "/logout" },
 ];
 
 type NabBarProps = {
@@ -52,7 +52,11 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 					</>
 				)}
 			</div>
-			<HoverMenu label={"User"} menuItem={hoverMenuItems} />
+			<HoverMenu
+				label={"User"}
+				menuItem={hoverMenuItems}
+				icon={IconTypes.USER}
+			/>
 		</div>
 	);
 };

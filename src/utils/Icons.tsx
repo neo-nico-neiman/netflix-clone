@@ -6,49 +6,58 @@ import {
 	TiMessage,
 	TiEyeOutline,
 	TiThMenuOutline,
+	TiUserOutline,
 } from "react-icons/ti";
+import { IconTypes } from "../models/icons.enum";
 
 const Icons = {
-	thumbs: (
+	[IconTypes.THUMBS]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiThumbsUp />
 		</IconContext.Provider>
 	),
-	play: (
+	[IconTypes.PLAY]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiMediaPlayOutline />
 		</IconContext.Provider>
 	),
-	grid: (
+	[IconTypes.GRID]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiThLargeOutline />
 		</IconContext.Provider>
 	),
-	subtitles: (
+	[IconTypes.SUBTITLES]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiMessage />
 		</IconContext.Provider>
 	),
-	eye: (
+	[IconTypes.EYE]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiEyeOutline />
 		</IconContext.Provider>
 	),
-	menu: (
+	[IconTypes.MENU]: (
 		<IconContext.Provider
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiThMenuOutline />
+		</IconContext.Provider>
+	),
+	[IconTypes.USER]: (
+		<IconContext.Provider
+			value={{ color: "inherit", className: "react-icons" }}
+		>
+			<TiUserOutline />
 		</IconContext.Provider>
 	),
 };

@@ -11,15 +11,18 @@ function App() {
 		{ label: "Home", link: "/home" },
 		{ label: "Categories", link: "/categories" },
 		{ label: "TV Shows", link: "/tv-shows" },
-		{ label: "Movies", link: "/movies" },
+		{ label: "Movies", link: "/movies-menu" },
 		{ label: "My Picks", link: "/my-picks" },
 	];
 	return (
 		<>
 			<NavBar menuItems={menuItems} />
 			<Route path='/home' component={Home}></Route>
+			<Route path='/profile' component={CommingSoon}></Route>
+			<Route path='/contact' component={CommingSoon}></Route>
+			<Route path='/logout' component={CommingSoon}></Route>
 			<Route path='/categories' component={CommingSoon}></Route>
-			<Route path='/movies' component={CommingSoon}></Route>
+			<Route path='/movies-menu' component={CommingSoon}></Route>
 			<Route path='/tv-shows' component={CommingSoon}></Route>
 			<Route path='/my-picks' component={CommingSoon}></Route>
 			<Route path='/movies/:id' component={MoviePage}></Route>
