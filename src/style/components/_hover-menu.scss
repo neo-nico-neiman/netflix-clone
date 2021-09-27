@@ -22,13 +22,14 @@
 		grid-row-gap: 4px;
 		position: absolute;
 		top: 35px;
-		right: 25px;
 		z-index: 10;
-		background-color: $bright-color-2;
-		border-radius: $border-radius-sm;
+		background-color: $background-color-2;
+		border-radius: $border-radius;
+		border: 1px solid $bright-color-2;
 
 		li {
-			padding: $padding-xs $padding-sm;
+			padding: $padding-xs $padding;
+			color: $bright-color-2;
 
 			&:hover {
 				background-color: $background-color-2;
@@ -36,5 +37,13 @@
 				cursor: pointer;
 			}
 		}
+
+		&:last-child {
+			padding-bottom: $padding-sm;
+		}
 	}
+}
+
+.left {
+	right: 25px;
 }

@@ -1,6 +1,6 @@
 export interface NavBarItem {
 	label: string;
-	url: string;
+	link: string;
 }
 
 export interface MenuItem {

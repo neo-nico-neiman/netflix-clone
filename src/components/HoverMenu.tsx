@@ -1,36 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, MouseEvent, useRef } from "react";
 import { MenuItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
+import { IconTypes } from "../models/icons.enum";
+import Icons from "../utils/Icons";
+import { Link } from "react-router-dom";
+import useOnClickOutside from "../hooks/useClickOutside";
 
 type HoverMenuProps = {
-	label: string;
+	label?: string;
+	icon?: IconTypes;
 	menuItem: MenuItem[];
+	openLeft?: boolean;
 };
-const HoverMenu: React.FC<HoverMenuProps> = ({ label, menuItem }) => {
+const HoverMenu: React.FC<HoverMenuProps> = ({
+	label,
+	menuItem,
+	icon,
+	openLeft = true,
+}) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const handleCLickOutside = () => {
+	const nodeRef = useRef<HTMLHeadingElement>(null);
+
+	const handleClickOutside = () => {
 		setIsOpen(false);
 	};
 
-	useEffect(() => {
-		document.addEventListener("mousedown", handleCLickOutside);
-		return () => {
-			document.removeEventListener("mousedown", handleCLickOutside);
-		};
-	});
+	// useOnClickOutside(nodeRef, handleClickOutside);
+
+	const handleClickInside = (event: MouseEvent) => {
+		event.stopPropagation();
+		setIsOpen(false);
+	};
 
 	return (
 		<div className='hover-menu-wrapper'>
-			<div
-				className={"hover-menu-label"}
-				onMouseOver={() => setIsOpen(!isOpen)}
-			>
-				{label}
+			<div className={"hover-menu-label"} onClick={() => setIsOpen(!isOpen)}>
+				{icon && Icons[icon]}
+				{label && label}
 			</div>
 			{isOpen && (
-				<ul className={"hover-menu-items"}>
+				<ul className={`hover-menu-items ${openLeft && "left"}`}>
 					{menuItem.map((item: MenuItem) => (
-						<li key={uuidv4()}>{item.label}</li>
+						<li key={uuidv4()}>
+							<Link onClick={handleClickInside} to={item.link}>
+								{item.label}
+							</Link>
+						</li>
 					))}
 				</ul>
 			)}

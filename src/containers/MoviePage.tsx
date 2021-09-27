@@ -6,6 +6,7 @@ import { TitleXLarge, TextContent } from "../components";
 import { ButtonHollowBorder } from "../components/Buttons";
 import nameGenerator from "../utils/nameGenerator";
 import useWindowDimensions from "../hooks/useWindowsDimension";
+import { ScreenSize } from "../models/screenSize.enum";
 
 const MoviePage = () => {
 	const { id } = useParams<{ id: string }>();
@@ -60,7 +61,9 @@ const MoviePage = () => {
 					</div>
 					<div
 						className={
-							screenSize === "sm" ? "movie-page-CTA-mobile" : "movie-page-CTA"
+							screenSize === ScreenSize.SM
+								? "movie-page-CTA-mobile"
+								: "movie-page-CTA"
 						}
 					>
 						<ButtonHollowBorder

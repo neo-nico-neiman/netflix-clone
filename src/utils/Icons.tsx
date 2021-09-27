@@ -5,6 +5,7 @@ import {
 	TiThLargeOutline,
 	TiMessage,
 	TiEyeOutline,
+	TiThMenuOutline,
 } from "react-icons/ti";
 
 const Icons = {
@@ -41,6 +42,13 @@ const Icons = {
 			value={{ color: "inherit", className: "react-icons" }}
 		>
 			<TiEyeOutline />
+		</IconContext.Provider>
+	),
+	menu: (
+		<IconContext.Provider
+			value={{ color: "inherit", className: "react-icons" }}
+		>
+			<TiThMenuOutline />
 		</IconContext.Provider>
 	),
 };
