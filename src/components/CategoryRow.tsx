@@ -9,13 +9,18 @@ type CategoryRowProps = {
 };
 
 const CategoryRow: React.FC<CategoryRowProps> = ({ moviesList }) => {
+	let shuffledList = moviesList.list
+		.map((value) => ({ value, sort: Math.random() }))
+		.sort((a, b) => a.sort - b.sort)
+		.map(({ value }) => value);
+
 	return (
 		<div className={"category-wrapper"}>
 			<TitleLarge class={"category-row-title"}>
 				{moviesList.category}
 			</TitleLarge>
 			<div className={"category-row"}>
-				{moviesList.list.map((movie: Movie) => (
+				{shuffledList.map((movie: Movie) => (
 					<Link to={`/movies/${movie.id}`} key={uuidv4()}>
 						<Thumbnail
 							imageURL={movie.imageURL}

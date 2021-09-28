@@ -1,10 +1,9 @@
-import React, { useState, MouseEvent, useRef } from "react";
+import React, { useState, MouseEvent } from "react";
 import { MenuItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
 import { IconTypes } from "../models/icons.enum";
 import Icons from "../utils/Icons";
 import { Link } from "react-router-dom";
-import useOnClickOutside from "../hooks/useClickOutside";
 
 type HoverMenuProps = {
 	label?: string;
@@ -19,11 +18,11 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
 	openLeft = true,
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const nodeRef = useRef<HTMLHeadingElement>(null);
+	// const nodeRef = useRef<HTMLHeadingElement>(null);
 
-	const handleClickOutside = () => {
-		setIsOpen(false);
-	};
+	// const handleClickOutside = () => {
+	// 	setIsOpen(false);
+	// };
 
 	// useOnClickOutside(nodeRef, handleClickOutside);
 

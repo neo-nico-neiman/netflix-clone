@@ -37,11 +37,9 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 					/>
 				) : (
 					<>
-						<p>
-							<Link to='/home'>
-								<Logo />
-							</Link>
-						</p>
+						<Link to='/home' className='navbar-logo'>
+							<Logo />
+						</Link>
 						<ul>
 							{menuItems.map((item: NavBarItem) => (
 								<li key={uuidv4()}>
