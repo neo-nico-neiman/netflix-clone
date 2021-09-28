@@ -10,8 +10,7 @@
 	}
 
 	&-row {
-		display: grid;
-		grid-template-columns: repeat(10, min-content);
+		display: flex;
 		grid-column-gap: $column-gap;
 
 		&-title {

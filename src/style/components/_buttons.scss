@@ -19,9 +19,11 @@
 	&-hollow-border {
 		background-color: transparent;
 		border: 2px solid transparent;
-		padding: $padding-xs 40px $padding-xs $padding-xs;
+		padding: $padding-xs $padding-sm;
 		border-radius: $border-radius;
 		color: $bright-color;
+		width: 165px;
+		text-align: left;
 
 		&:hover {
 			cursor: pointer;

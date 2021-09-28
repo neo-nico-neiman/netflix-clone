@@ -13,6 +13,7 @@ type HoverMenuProps = {
 	menuItem: MenuItem[];
 	openLeft?: boolean;
 };
+
 const HoverMenu: React.FC<HoverMenuProps> = ({
 	label,
 	menuItem,

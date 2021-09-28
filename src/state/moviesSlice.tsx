@@ -1,10 +1,10 @@
-import { Movie } from "../models/movies.model";
-import { Observable, from, filter } from "rxjs";
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Categories } from "../models/categories.enum";
+import { Movie } from "../models/movies.model";
 import { titleGenerator } from "../utils/titleCreator";
+import { RootState } from "./store";
 
-const list = [
+const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpeg",
 		altText: "Denise Jans",
@@ -327,13 +327,74 @@ const list = [
 	},
 ];
 
-const moviesList$: Observable<Movie> = from([...list]);
+// Define a type for the slice state
+interface MoviesState {
+	moviesList: Movie[];
+	myList: Movie[];
+}
 
-const moviesListAction$: Observable<Movie> = moviesList$.pipe(
-	filter((movie: Movie) => movie.category === Categories.ACTION)
-);
+// Define the initial state using that type
+const initialState: MoviesState = {
+	moviesList: moviesList,
+	myList: [],
+};
 
-const getSelectedMovie = (id: number) =>
-	moviesList$.pipe(filter((movie: Movie) => movie.id === id));
+const moviesSlice = createSlice({
+	name: "movies",
+	initialState: initialState,
+	reducers: {
+		add: (state, action: PayloadAction<Movie[]>) => {
+			// Redux Toolkit allows us to write "mutating" logic in reducers. It
+			// doesn't actually mutate the state because it uses the Immer library,
+			// which detects changes to a "draft state" and produces a brand new
+			// immutable state based off those changes
+			state.myList = { ...state.myList };
+		},
+		remove: (state) => {
+			state.myList = { ...state.myList };
+		},
+		reset: (state, action) => {
+			state.myList = [];
+		},
+	},
+});
 
-export { moviesList$, moviesListAction$, getSelectedMovie };
+// Action creators are generated for each case reducer function
+export const { add, remove, reset } = moviesSlice.actions;
+
+const selectMoviesList = (state: RootState) => state.movies.moviesList;
+
+const selectCategoryAction = (state: RootState) =>
+	state.movies.moviesList.filter(
+		(movie: Movie) => movie.category === Categories.ACTION
+	);
+
+const selectCategoryHorror = (state: RootState) =>
+	state.movies.moviesList.filter(
+		(movie: Movie) => movie.category === Categories.HORROR
+	);
+
+const selectCategoryComedy = (state: RootState) =>
+	state.movies.moviesList.filter(
+		(movie: Movie) => movie.category === Categories.COMEDY
+	);
+
+const selectCategoryRomance = (state: RootState) =>
+	state.movies.moviesList.filter(
+		(movie: Movie) => movie.category === Categories.ROMANCE
+	);
+
+const selectCurrentMovie = (state: RootState, id: number) =>
+	state.movies.moviesList.filter((movie: Movie) => movie.id === id)[0];
+
+export default moviesSlice.reducer;
+
+export {
+	moviesSlice,
+	selectMoviesList,
+	selectCategoryAction,
+	selectCategoryHorror,
+	selectCategoryComedy,
+	selectCategoryRomance,
+	selectCurrentMovie,
+};

@@ -1,11 +1,12 @@
 import React from "react";
+import { IconTypes } from "../models/icons.enum";
 import Icons from "../utils/Icons";
 
 type BaseButtonProps = {
 	label: string;
 	onClick: any;
 	className: string;
-	icon?: "thumbs" | "play" | "grid" | "subtitles";
+	icon?: IconTypes;
 };
 
 const BaseButton: React.FC<BaseButtonProps> = ({

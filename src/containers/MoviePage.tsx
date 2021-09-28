@@ -1,27 +1,17 @@
 import React from "react";
-import { getSelectedMovie } from "../state/movies.facade";
-import { Movie } from "../models/movies.model";
 import { useParams } from "react-router-dom";
 import { TitleXLarge, TextContent } from "../components";
 import { ButtonHollowBorder } from "../components/Buttons";
 import nameGenerator from "../utils/nameGenerator";
 import useWindowDimensions from "../hooks/useWindowsDimension";
 import { ScreenSize } from "../models/screenSize.enum";
+import store from "../state/store";
+import { selectCurrentMovie } from "../state/moviesSlice";
+import { IconTypes } from "../models/icons.enum";
 
 const MoviePage = () => {
 	const { id } = useParams<{ id: string }>();
-	const movie$ = getSelectedMovie(+id);
-	let selectedMovie: Movie = {
-		id: 0,
-		imageURL: "",
-		altText: "",
-		title: "",
-		description: "",
-		link: "",
-		category: "",
-	};
-
-	movie$.subscribe((movie) => (selectedMovie = movie));
+	const selectedMovie = selectCurrentMovie(store.getState(), +id);
 
 	const onClick = () => null;
 
@@ -68,25 +58,25 @@ const MoviePage = () => {
 					>
 						<ButtonHollowBorder
 							label='Rate This Title'
-							icon='thumbs'
+							icon={IconTypes.THUMBS}
 							onClick={onClick()}
 							className=''
 						></ButtonHollowBorder>
 						<ButtonHollowBorder
 							label='Play'
-							icon='play'
+							icon={IconTypes.PLAY}
 							onClick={onClick()}
 							className=''
 						></ButtonHollowBorder>
 						<ButtonHollowBorder
 							label='More Like This'
-							icon='grid'
+							icon={IconTypes.GRID}
 							onClick={onClick()}
 							className=''
 						></ButtonHollowBorder>
 						<ButtonHollowBorder
 							label={"Audio & Subtitles"}
-							icon='subtitles'
+							icon={IconTypes.SUBTITLES}
 							onClick={onClick()}
 							className=''
 						></ButtonHollowBorder>

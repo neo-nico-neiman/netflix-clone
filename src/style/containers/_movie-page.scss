@@ -76,6 +76,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 240px;
+		position: relative;
+		left: -12px;
 
 		button {
 			margin-top: $margin-sm;
@@ -86,6 +88,8 @@
 			display: grid;
 			grid-template-columns: max-content max-content;
 			justify-items: left;
+			position: relative;
+			left: -12px;
 		}
 	}
 }
