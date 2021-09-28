@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import { IconTypes } from "../models/icons.enum";
 import Icons from "../utils/Icons";
 import { Link } from "react-router-dom";
+import useWindowDimensions from "../hooks/useWindowsDimension";
+import { ScreenSize } from "../models/screenSize.enum";
 
 type HoverMenuProps = {
 	label?: string;
@@ -31,9 +33,18 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
 		setIsOpen(false);
 	};
 
+	const screenSize = useWindowDimensions();
+
 	return (
 		<div className='hover-menu-wrapper'>
-			<div className={"hover-menu-label"} onClick={() => setIsOpen(!isOpen)}>
+			<div
+				className={
+					screenSize === ScreenSize.SM
+						? "hover-menu-label-mobile"
+						: "hover-menu-label"
+				}
+				onClick={() => setIsOpen(!isOpen)}
+			>
 				{icon && Icons[icon]}
 				{label && label}
 			</div>

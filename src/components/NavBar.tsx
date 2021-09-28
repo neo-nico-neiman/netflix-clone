@@ -30,11 +30,18 @@ const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
 				}
 			>
 				{screenSize === ScreenSize.SM ? (
-					<HoverMenu
-						menuItem={menuItems}
-						icon={IconTypes.MENU}
-						openLeft={false}
-					/>
+					<div className='navBar-mobile-menu-logo'>
+						<HoverMenu
+							menuItem={menuItems}
+							icon={IconTypes.MENU}
+							openLeft={false}
+						/>
+						<span className='navbar-logo'>
+							<Link to='/home'>
+								<Logo />
+							</Link>
+						</span>
+					</div>
 				) : (
 					<>
 						<Link to='/home' className='navbar-logo'>

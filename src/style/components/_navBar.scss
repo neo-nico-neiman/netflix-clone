@@ -8,6 +8,11 @@
 	&-mobile {
 		color: $bright-color;
 		margin: $margin-sm $margin;
+
+		&-menu-logo {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	&-logo-and-items {
@@ -61,4 +66,5 @@
 
 .navbar-logo {
 	padding: $padding-sm $padding;
+	color: $bright-color;
 }

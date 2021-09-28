@@ -14,6 +14,11 @@
 	&-label {
 		margin: $margin-sm $margin-lg 0 0;
 		color: $bright-color;
+
+		&-mobile {
+			margin: $margin-sm $margin 0 0;
+			color: $bright-color;
+		}
 	}
 	&-items {
 		list-style: none;

@@ -1,6 +1,8 @@
 import React from "react";
 import { TextContent, TitleXLarge } from ".";
+import useWindowDimensions from "../hooks/useWindowsDimension";
 import { Movie } from "../models/movies.model";
+import { ScreenSize } from "../models/screenSize.enum";
 import { ButtonSecondary } from "./Buttons";
 
 type HeroImageProps = {
@@ -10,6 +12,8 @@ type HeroImageProps = {
 const HeroImage: React.FC<HeroImageProps> = ({ movie }) => {
 	const onPlay = () => null;
 	const onMyList = () => null;
+
+	const screenSize = useWindowDimensions();
 
 	return (
 		<div
@@ -31,7 +35,13 @@ const HeroImage: React.FC<HeroImageProps> = ({ movie }) => {
 						className='margin-left-sm'
 					></ButtonSecondary>
 				</div>
-				<TextContent class={"hero-text-description"}>
+				<TextContent
+					class={
+						screenSize === ScreenSize.SM
+							? "hero-text-description-mobile"
+							: "hero-text-description"
+					}
+				>
 					{movie.description}
 				</TextContent>
 			</div>
