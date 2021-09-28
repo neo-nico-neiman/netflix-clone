@@ -8,7 +8,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpeg",
 		altText: "Denise Jans",
-		title: "Denise Jans",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -18,7 +18,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/8Y43POKjjKDGI9MH89NW0NAzzp8.jpeg",
 		altText: "Popcorn Factory",
-		title: "Popcorn Factory",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -28,7 +28,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/byflnwPMumyvrCW9SfO5Miq3647.jpeg",
 		altText: "Once Upon A Movie",
-		title: "Once Upon A Movie",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -38,7 +38,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpeg",
 		altText: "Levitation",
-		title: "Levitation",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -48,7 +48,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpeg",
 		altText: "Regal Solarium",
-		title: "Regal Solarium",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -58,7 +58,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/MDYanFolbT76dj0gsCbhS2GM5A.jpeg",
 		altText: "Regal Solarium",
-		title: "Regal Solarium",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -68,7 +68,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/uizrxdqIl1a4c9UIhSdPM3o6u0f.jpeg",
 		altText: "Regal Solarium",
-		title: "Regal Solarium",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
@@ -78,7 +78,7 @@ const moviesList = [
 	{
 		imageURL: "./images/thumbnails/action/vD8oPUpDUZDTGI5IVofxrUjxxUO.jpeg",
 		altText: "Regal Solarium",
-		title: "Regal Solarium",
+		title: titleGenerator(),
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		link: "",
