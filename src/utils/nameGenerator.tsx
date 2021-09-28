@@ -3752,8 +3752,7 @@ const nameGenerator = (numberOfNames: number = 1) => {
 		if (indexName >= names.length) {
 			indexName = indexName - Math.round(Math.random() * 100);
 		}
-		console.log(surNames.length);
-		console.log(names.length);
+
 		if (indexSurName >= surNames.length) {
 			indexSurName = indexSurName - Math.round(Math.random() * 100);
 		}

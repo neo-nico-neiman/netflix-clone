@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import { Home } from "./containers/Home";
 import { NavBarItem } from "./models/navBar.model";
 import { Route } from "react-router-dom";
-import { CommingSoon } from "./components/CommingSoon";
+import { ComingSoon } from "./components/ComingSoon";
 import { MoviePage } from "./containers/MoviePage";
 
 function App() {
@@ -18,13 +18,13 @@ function App() {
 		<>
 			<NavBar menuItems={menuItems} />
 			<Route path='/home' component={Home}></Route>
-			<Route path='/profile' component={CommingSoon}></Route>
-			<Route path='/contact' component={CommingSoon}></Route>
-			<Route path='/logout' component={CommingSoon}></Route>
-			<Route path='/categories' component={CommingSoon}></Route>
-			<Route path='/movies-menu' component={CommingSoon}></Route>
-			<Route path='/tv-shows' component={CommingSoon}></Route>
-			<Route path='/my-picks' component={CommingSoon}></Route>
+			<Route path='/profile' component={ComingSoon}></Route>
+			<Route path='/contact' component={ComingSoon}></Route>
+			<Route path='/logout' component={ComingSoon}></Route>
+			<Route path='/categories' component={ComingSoon}></Route>
+			<Route path='/movies-menu' component={ComingSoon}></Route>
+			<Route path='/tv-shows' component={ComingSoon}></Route>
+			<Route path='/my-picks' component={ComingSoon}></Route>
 			<Route path='/movies/:id' component={MoviePage}></Route>
 			<Route path='/' exact component={Home}></Route>
 		</>
