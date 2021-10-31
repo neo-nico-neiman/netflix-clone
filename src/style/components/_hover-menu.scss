@@ -51,4 +51,8 @@
 
 .left {
 	right: 25px;
+
+	&-mobile {
+		right: 15px;
+	}
 }

@@ -50,7 +50,15 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
 				{label && label}
 			</div>
 			{isOpen && (
-				<ul className={`hover-menu-items ${openLeft && "left"}`}>
+				<ul
+					className={`hover-menu-items ${
+						openLeft
+							? screenSize === ScreenSize.SM
+								? "left-mobile"
+								: "left"
+							: ""
+					}`}
+				>
 					{menuItem.map((item: MenuItem) => (
 						<li key={uuidv4()}>
 							<Link onClick={handleClickInside} to={item.link}>
