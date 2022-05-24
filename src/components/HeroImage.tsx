@@ -1,4 +1,3 @@
-import React from "react";
 import { TextContent, TitleXLarge } from ".";
 import useWindowDimensions from "../hooks/useWindowsDimension";
 import { Movie } from "../models/movies.model";
@@ -9,7 +8,7 @@ type HeroImageProps = {
 	movie: Movie;
 };
 
-const HeroImage: React.FC<HeroImageProps> = ({ movie }) => {
+const HeroImage = ({ movie }: HeroImageProps) => {
 	const onPlay = () => null;
 	const onMyList = () => null;
 

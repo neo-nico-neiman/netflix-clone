@@ -1,4 +1,3 @@
-import React from "react";
 import HeroImage from "../components/HeroImage";
 import { Categories } from "../models/categories.enum";
 import { Movie } from "../models/movies.model";

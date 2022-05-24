@@ -1,4 +1,3 @@
-import React from "react";
 import { MenuItem, NavBarItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
 import HoverMenu from "./HoverMenu";
@@ -18,7 +17,7 @@ type NabBarProps = {
 	menuItems: NavBarItem[];
 };
 
-const NavBar: React.FC<NabBarProps> = ({ menuItems }) => {
+const NavBar = ({ menuItems }: NabBarProps) => {
 	const screenSize = useWindowDimensions();
 	return (
 		<div className='navBar'>

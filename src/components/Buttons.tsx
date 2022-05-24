@@ -1,4 +1,3 @@
-import React from "react";
 import { IconTypes } from "../models/icons.enum";
 import Icons from "../utils/Icons";
 
@@ -9,12 +8,7 @@ type BaseButtonProps = {
 	icon?: IconTypes;
 };
 
-const BaseButton: React.FC<BaseButtonProps> = ({
-	label,
-	onClick,
-	className,
-	icon,
-}) => {
+const BaseButton = ({ label, onClick, className, icon }: BaseButtonProps) => {
 	return (
 		<button className={className} onClick={onClick}>
 			{icon && Icons[icon]}
@@ -23,12 +17,12 @@ const BaseButton: React.FC<BaseButtonProps> = ({
 	);
 };
 
-const ButtonSecondary: React.FC<BaseButtonProps> = ({
+const ButtonSecondary = ({
 	label,
 	onClick,
 	className,
 	icon,
-}) => {
+}: BaseButtonProps) => {
 	return (
 		<BaseButton
 			label={label}
@@ -39,12 +33,12 @@ const ButtonSecondary: React.FC<BaseButtonProps> = ({
 	);
 };
 
-const ButtonHollowBorder: React.FC<BaseButtonProps> = ({
+const ButtonHollowBorder = ({
 	label,
 	onClick,
 	className,
 	icon,
-}) => {
+}: BaseButtonProps) => {
 	return (
 		<BaseButton
 			label={label}
@@ -54,4 +48,5 @@ const ButtonHollowBorder: React.FC<BaseButtonProps> = ({
 		></BaseButton>
 	);
 };
+
 export { BaseButton, ButtonSecondary, ButtonHollowBorder };

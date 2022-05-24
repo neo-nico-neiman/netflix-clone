@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import ReactPlayer from 'react-player/lazy'
+import { useState } from "react";
+import ReactPlayer from "react-player/lazy";
 
 // {
 //     "imDbId": "tt0111161",
@@ -17,21 +17,27 @@ import ReactPlayer from 'react-player/lazy'
 //     "errorMessage": ""
 // }
 interface MovieTrailerProps {
-    id: string;
+	id: string;
 }
 
-export default function MovieTrailer({id}: MovieTrailerProps) {
-    const [trailer, setTrailer] = useState<{ link: string } | undefined>(undefined);
+export default function MovieTrailer({ id }: MovieTrailerProps) {
+	const [trailer, setTrailer] = useState<{ link: string } | undefined>(
+		undefined
+	);
 
-    async function getTrailer(id: string) {
-        const res = await fetch(`${process.env.REACT_APP_IMDB_URL}Trailer/${process.env.REACT_APP_IMDB_KEY_2}/${id}`);
-        const data = await res.json();
-        return data
-    }
+	async function getTrailer(id: string) {
+		const res = await fetch(
+			`${process.env.REACT_APP_IMDB_URL}Trailer/${process.env.REACT_APP_IMDB_KEY_2}/${id}`
+		);
+		const data = await res.json();
+		return data;
+	}
 
-    getTrailer(id).then(t => setTrailer(t))
+	getTrailer(id).then((t) => setTrailer(t));
 
-    return (
-        <div><ReactPlayer url={trailer?.link}/></div>
-    );
+	return (
+		<div>
+			<ReactPlayer url={trailer?.link} />
+		</div>
+	);
 }

@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent } from "react";
+import { useState, MouseEvent } from "react";
 import { MenuItem } from "../models/navBar.model";
 import { v4 as uuidv4 } from "uuid";
 import { IconTypes } from "../models/icons.enum";
@@ -14,12 +14,12 @@ type HoverMenuProps = {
 	openLeft?: boolean;
 };
 
-const HoverMenu: React.FC<HoverMenuProps> = ({
+const HoverMenu = ({
 	label,
 	menuItem,
 	icon,
 	openLeft = true,
-}) => {
+}: HoverMenuProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	// const nodeRef = useRef<HTMLHeadingElement>(null);
 

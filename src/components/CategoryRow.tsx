@@ -1,4 +1,3 @@
-import React from "react";
 import { Thumbnail, TitleLarge } from "../components";
 import { Movie } from "../models/movies.model";
 import { v4 as uuidv4 } from "uuid";
@@ -10,7 +9,7 @@ type CategoryRowProps = {
 	category: string;
 };
 
-const CategoryRow: React.FC<CategoryRowProps> = ({ moviesList, category }) => {
+const CategoryRow = ({ moviesList, category }: CategoryRowProps) => {
 	let shuffledList = moviesList
 		?.map((value) => ({ value, sort: Math.random() }))
 		.sort((a, b) => a.sort - b.sort)
