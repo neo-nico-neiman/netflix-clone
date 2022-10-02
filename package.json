@@ -1,7 +1,7 @@
 {
   "name": "netflix-clone",
   "version": "1.0.1",
-  "homepage": "https://neo-nico-neiman.github.io/netflix-clone",
+  "homepage": "https://neo-nico-neiman.github.io/home",
   "private": true,
   "dependencies": {
     "@reactivex/rxjs": "^6.6.7",
