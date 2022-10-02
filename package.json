@@ -1,6 +1,7 @@
 {
   "name": "netflix-clone",
-  "version": "0.1.0",
+  "version": "1.0.1",
+  "homepage": "https://neo-nico-neiman.github.io/netflix-clone",
   "private": true,
   "dependencies": {
     "@reactivex/rxjs": "^6.6.7",
@@ -26,6 +27,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -52,6 +55,7 @@
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
     "@types/react-router-dom": "^5.3.0",
-    "@types/uuid": "^8.3.1"
+    "@types/uuid": "^8.3.1",
+    "gh-pages": "^4.0.0"
   }
 }
