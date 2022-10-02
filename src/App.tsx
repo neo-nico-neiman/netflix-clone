@@ -26,6 +26,7 @@ function App() {
 			<Route path='/tv-shows' component={ComingSoon}></Route>
 			<Route path='/my-picks' component={ComingSoon}></Route>
 			<Route path='/movies/:id' component={MoviePage}></Route>
+			<Route path='/netflix-clone' component={Home}></Route>
 			<Route path='/' exact component={Home}></Route>
 		</>
 	);
