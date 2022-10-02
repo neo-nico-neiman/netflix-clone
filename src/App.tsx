@@ -14,21 +14,19 @@ function App() {
 		{ label: "Movies", link: "/movies-menu" },
 		{ label: "My Picks", link: "/my-picks" },
 	];
-
-	const root='netflix-clone'
 	return (
 		<>
 			<NavBar menuItems={menuItems} />
-			<Route path={`${root}/home`} component={Home}></Route>
-			<Route path={`${root}/profile`} component={ComingSoon}></Route>
-			<Route path={`${root}/contact`} component={ComingSoon}></Route>
-			<Route path={`${root}/logout`} component={ComingSoon}></Route>
-			<Route path={`${root}/categories`} component={ComingSoon}></Route>
-			<Route path={`${root}/movies-menu`} component={ComingSoon}></Route>
-			<Route path={`${root}/tv-shows`} component={ComingSoon}></Route>
-			<Route path={`${root}/my-picks`} component={ComingSoon}></Route>
-			<Route path={`${root}/movies/:id`} component={MoviePage}></Route>
-			<Route path={`${root}/`} exact component={Home}></Route>
+			<Route path='/netflix-clone' component={Home}></Route>
+			<Route path='/profile' component={ComingSoon}></Route>
+			<Route path='/contact' component={ComingSoon}></Route>
+			<Route path='/logout' component={ComingSoon}></Route>
+			<Route path='/categories' component={ComingSoon}></Route>
+			<Route path='/movies-menu' component={ComingSoon}></Route>
+			<Route path='/tv-shows' component={ComingSoon}></Route>
+			<Route path='/my-picks' component={ComingSoon}></Route>
+			<Route path='/movies/:id' component={MoviePage}></Route>
+			<Route path='/' exact component={Home}></Route>
 		</>
 	);
 }
